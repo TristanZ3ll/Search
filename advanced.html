@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <link rel= "stylesheet" href= style.css>
+    <head>
+        <title>Advanced Search</title>
+    </head>
+    <body>
+        <form id ="advancedSearch"> 
+        Find pages with... <br/> <br/> 
+        <form action="https://google.com/search">
+            <input type="text" name="basic">
+            <input type="submit" value="Google Search">
+            <br/><br/>all these words: <br/><br/>
+            <input type="text" name ="all">
+            <input type="submit" value = "Google Search">
+            <br/><br/> this exact word or phrase: <br/> 
+            <input type ="hidden" name = "q" value='"'>
+            <br/> <input type ="text" name = "exact">
+            <input type = "hidden" name = "q" value = '"'>
+            <input type = submit value = "Google Search">
+            <br/><br/>  any of these words: <br/>
+            <br/><input type="text" name = "any">
+            <input type =submit value = "Google Search">
+            <br/><br/>none of these words: <br/><br/>
+            <input type = "hidden" name = "q" value = "-">
+            <input type="text" name="none">
+            <input type="submit" value="Google Search">
+        </form>
+       <a href=  "./search.html">Google Search</a>
+    <script>
+        //javascript to add " OR " after user submits any of these words
+        const inputForm =document.querySelector('#advancedSearch');
+        const userInput = document.querySelector('#any');
+        const output = document.querySelector('#output');
+
+        inputForm.addEventListener('submit',function(e) {
+            e.preventDefault();
+
+            const inputValue = any.value;
+            const replacedValue = inputValue.split(' ').join(' OR ');
+            
+            output.textContent = replacedValue;
+        });
+    </script>
+    </body>
+
+    </html>
