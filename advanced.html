@@ -9,24 +9,24 @@
         Find pages with... <br/> <br/> 
         <form action="https://google.com/search">
             <input type="text" name="basic">
-            <input type="submit" value="Google Search">
+            
             <br/><br/>all these words: <br/><br/>
             <input type="text" name ="all">
-            <input type="submit" value = "Google Search">
+            
             <br/><br/> this exact word or phrase: <br/> 
             <input type ="hidden" name = "q" value='"'>
             <br/> <input type ="text" name = "exact">
             <input type = "hidden" name = "q" value = '"'>
-            <input type = submit value = "Google Search">
+          
             <br/><br/>  any of these words: <br/>
             <br/><input type="text" name = "any">
-            <input type =submit value = "Google Search">
+           
             <br/><br/>none of these words: <br/><br/>
             <input type = "hidden" name = "q" value = "-">
-            <input type="text" name="none">
-            <input type="submit" value="Google Search">
+            <input type="text" name="none"> <br/> <br/>
+            <input type="submit" value="Advanced Search">
         </form>
-       <a href=  "./search.html">Google Search</a>
+       <a href=  "./index.html">Google Search</a>
     <script>
         //javascript to add " OR " after user submits any of these words
         const inputForm =document.querySelector('#advancedSearch');
