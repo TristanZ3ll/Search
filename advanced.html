@@ -7,7 +7,7 @@
     <body>
 
         Find pages with... <br/> <br/> 
-        <form action="https://google.com/advanced">
+        <form method="get" action="https://www.google.com/advanced_image_search">
             
             <br/><br/>all these words: <br/><br/>
             <input type="text" name ="q">
@@ -23,20 +23,8 @@
             <input type="submit" value="Advanced Search">
         </form>
        <a href=  "./index.html">Google Search</a>
-    <script>
-        //javascript to add " OR " after user submits any of these words
-        const userInput = document.querySelector('#any');
-        const output = document.querySelector('#output');
-
-        inputForm.addEventListener('submit',function(e) {
-            e.preventDefault();
-
-            const inputValue = any.value;
-            const replacedValue = inputValue.split(' ').join(' OR ');
-            
-            output.textContent = replacedValue;
-        });
-    </script>
+    
+    
     </body>
 
     </html>
