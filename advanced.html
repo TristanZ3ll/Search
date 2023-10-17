@@ -5,31 +5,26 @@
         <title>Advanced Search</title>
     </head>
     <body>
-        <form id ="advancedSearch"> 
+
         Find pages with... <br/> <br/> 
-        <form action="https://google.com/search">
-            <input type="text" name="basic">
+        <form action="https://google.com/advanced">
             
             <br/><br/>all these words: <br/><br/>
-            <input type="text" name ="all">
+            <input type="text" name ="q">
             
             <br/><br/> this exact word or phrase: <br/> 
-            <input type ="hidden" name = "q" value='"'>
-            <br/> <input type ="text" name = "exact">
-            <input type = "hidden" name = "q" value = '"'>
+            <br/> <input type ="text" name = "epq">
           
             <br/><br/>  any of these words: <br/>
-            <br/><input type="text" name = "any">
+            <br/><input type="text" name = "oq">
            
             <br/><br/>none of these words: <br/><br/>
-            <input type = "hidden" name = "q" value = "-">
-            <input type="text" name="none"> <br/> <br/>
+            <input type="text" name="eq"> <br/> <br/>
             <input type="submit" value="Advanced Search">
         </form>
        <a href=  "./index.html">Google Search</a>
     <script>
         //javascript to add " OR " after user submits any of these words
-        const inputForm =document.querySelector('#advancedSearch');
         const userInput = document.querySelector('#any');
         const output = document.querySelector('#output');
 
